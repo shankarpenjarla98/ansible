@@ -10,9 +10,9 @@
     msg: "The new employee name is: {{name}} and his age is: {{age}} and status is:{{status}}"
   - name: Another person news
   vars:
-  - name: sravan
-  - age: fourty-two
-  - status: dead
+    name: sravan
+    age: fourty-two
+    status: dead
     house: moosapet
     ansible.builtin.debug:
     msg: "Due to corona one per was {{status}} his name is {{name}} and his age was {{age}} and he stay in {{house}}"
