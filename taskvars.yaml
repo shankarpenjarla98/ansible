@@ -2,15 +2,15 @@
   hosts: localhost
   vars:
   - name: srinaa
-  - age: thirty-two
-  - status: Alive
+    age: thirty-two
+    status: Alive
   tasks:
   - name: Printing the person informations
     ansible.builtin.debug:
     msg: "The new employee name is: {{name}} and his age is: {{age}} and status is:{{status}}"
   - name: Another person news
   vars:
-    name: sravan
+  - name: sravan
     age: fourty-two
     status: dead
     house: moosapet
