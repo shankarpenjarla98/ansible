@@ -1,7 +1,7 @@
 - name: printing simple condition
   hosts: localhost
   vars:
-  name: Devops
+    name: Devops
   tasks:
   - name: printing the course name
     ansible.builtin.debug:
