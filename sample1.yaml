@@ -12,6 +12,7 @@
     ansible.builtin.debug:
       msg: "{{output.rc}}"
   - name: creation od user if not exits
+    become: yes
     ansible.builtin.user:
       name: shankar
     when: output.rc != 0
