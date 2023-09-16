@@ -10,7 +10,7 @@
     msg: "The new employee name is: {{name}} and his age is: {{age}} and status is:{{status}}"
   - name: Another person news
   vars:
-  - name: sravan
+    name: sravan
     age: fourty-two
     status: dead
     house: moosapet
