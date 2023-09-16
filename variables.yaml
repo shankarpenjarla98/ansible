@@ -9,4 +9,4 @@
   tasks:
   - name: printing variables
     ansible.builtin.debug:
-      msg: "Hello Iam Learning {{Devops}}, Training by {{trainer}} and the duration is {{duration}}"
+      msg: "Hello Iam Learning {{course}}, Training by {{trainer}} and the duration is {{duration}}"
