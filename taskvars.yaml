@@ -1,0 +1,16 @@
+- name: Task Level variables
+  hosts: localhost
+  vars:
+    name: srinaa
+    age: thirty-two
+    status: Alive
+  tasks:
+  - name: Printing the person informations
+    ansible.builtin.debug:
+    msg: "The new employee name is: {{name}} and his age is: {{age}} and status is:{{status}}"
+    name: sravan
+    age: fourty-two
+    status: dead
+    ansible.builtin.debug:
+    msg: "Due to corona one per was {{status}} his name is {{name}} and his age was {{age}}"
+    
