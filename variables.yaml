@@ -1,0 +1,12 @@
+- name: Printing some text
+  hosts: mongodb
+  
+  vars:
+    course: Devops
+    trainer: sivakumar
+    duration: 110 hrs
+
+  tasks:
+  - name: printing variables
+    ansible.builtin.debug:
+      msg: "Hello Iam Learning {{Devops}}, Training by {{trainer}} and the duration is {{duration}}"
