@@ -1,0 +1,21 @@
+- name: assigment on user
+  hosts: localhost
+  tasks:
+  - name: checking user exits or not
+    ansible.builtin.command: id variable
+    register: output
+
+  - name: printing the output of checking
+    ansible.builtin.debug:
+      msg: "As per the research {{output}}"
+
+  - name: printing the existing status
+    ansible.builtin.debug:
+      msg: "The exiting status is:{{output.rc}}"
+
+  - name: creation of user
+    become: yes
+    ansible.builtin.user:
+      name: variable
+    when: output.rc != 0
+      
