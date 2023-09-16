@@ -4,6 +4,7 @@
   - name: checking user exits or not
     ansible.builtin.command: id variable
     register: output
+    ignore_errors: true
 
   - name: printing the output of checking
     ansible.builtin.debug:
