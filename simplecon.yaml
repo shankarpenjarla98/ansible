@@ -1,6 +1,6 @@
 - name: printing simple condition
   hosts: localhost
-vars:
+  vars:
   name: Devops
   tasks:
   - name: printing the course name
