@@ -1,5 +1,6 @@
 - name: installing catalogue microservice
   hosts: catalogue
+  become: yes
   tasks:
   - name: setting up nodejs-repos with vendor provided script
     ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash
