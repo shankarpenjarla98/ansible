@@ -20,7 +20,7 @@
     when: output.rc != 0
   - name: check app directory exits or not
     ansible.builtin.stat:
-    path: /app
+      path: /app
     register: directory
   - name: printing the directory state
     ansible.builtin.debug:
