@@ -9,5 +9,6 @@
       state: started
   - name: checking if user roboshop exits or not
     ansible.builtin.command: id roboshop
-      register: output
+    register: output
+    
   
