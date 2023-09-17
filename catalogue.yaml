@@ -62,7 +62,7 @@
       name: mongodb-org-shell
       state: installed
   - name: install dependencies
-    ansible.builtin.command: mongo --host mongodb.learndevops.uno </app/schema/catalogue.js
+    ansible.builtin.command: mongo --host mongodb.learndevops.uno < /app/schema/catalogue.js
   - name: restart catalogue
     ansible.builtin.service:
       name: catalogue
