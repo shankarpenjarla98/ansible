@@ -18,7 +18,7 @@
     ansible.builtin.user:
       name: roboshop
     when: output.rc != 0
-  - name: check /app directory exits or not
+  - name: check app directory exits or not
     ansible.builtin.stat:
     path: /app
     register: directory
