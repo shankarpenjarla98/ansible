@@ -1,4 +1,4 @@
- - name: installing cart component
+- name: installing cart component
   hosts: cart
   become: yes
   tasks:
