@@ -2,7 +2,7 @@
   hosts: catalogue
   tasks:
   - name: setting up nodejs-repos with vendor provided script
-    ansible.builtin.script: curl -sL https://rpm.nodesource.com/setup_lts.x | bash
+    ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash
   - name: installing the nodejs
     ansible.builtin.yum:
       name: nodejs
