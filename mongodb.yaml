@@ -1,0 +1,26 @@
+- name: Installing mongodb
+  hosts: mongodb
+  become: yes
+  tasks:
+  - name: copying the repo file
+    ansible.builtin.copy:
+    src: /home/centos/roboshop/ansible/mongo.repo
+    dest: /etc/yum.repos.d/mongo.repo
+  - name: install mongodb
+    ansible.builtin.yum:
+      name: mongodb-org
+      state: installed
+  - name: start and enable mongodb
+    ansible.builtin.service:
+      name: mongod
+      state: started
+      enabled: yes
+  - name: updating the listening address
+    ansible.builtin.replace:
+      path: /etc/mongod.conf
+      regexp: '127.0.0.1'
+      replace: '0.0.0.0'
+  - name: restarting the services
+    ansible.builtin.service:
+      name: mongod
+      state: restarted
