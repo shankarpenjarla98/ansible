@@ -1,5 +1,6 @@
 - name: installing web
   hosts: web
+  become: yes
   tasks:
   - name: installing nginx in web
     ansible.builtin.yum:
