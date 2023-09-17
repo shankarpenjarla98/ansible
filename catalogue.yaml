@@ -5,9 +5,9 @@
     ansible.builtin.script: curl -sL https://rpm.nodesource.com/setup_lts.x | bash
   - name: installing the nodejs
     ansible.builtin.yum:
-    name: nodejs
-    state: started
+      name: nodejs
+      state: started
   - name: checking if user roboshop exits or not
     ansible.builtin.command: id roboshop
-    register: output
+      register: output
   
