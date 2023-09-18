@@ -41,7 +41,7 @@
   - name: copy shipping service
     ansible.builtin.copy:
       src:  shipping.service
-      dest: etc/systemd/system/shipping.service
+      dest: /etc/systemd/system/shipping.service
   - name: daemon reload
     ansible.builtin.systemd:
       daemon_reload: true
@@ -55,7 +55,8 @@
       name: mysql
       state: installed
   - name: load schema setup
-    ansible.builtin.command: mysql -h mysql.learndevops.uno -uroot -pRoboShop@1 < /app/schema/shipping.sql 
+    ansible.builtin.command: mysql -h mysql.learndevops.uno -uroot -pRoboShop@1 < /app/schema/shipping.sql
+     
   - name: restart shipping 
     ansible.builtin.service:
       name: shipping
