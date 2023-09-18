@@ -40,7 +40,7 @@
       chdir: /app
   - name: copy shipping service
     ansible.builtin.copy:
-      src: shipping.service
+      src:  shipping.service
       dest: /etc/systemd/system/shipping.service
   - name: daemon reload
     ansible.builtin.systemd:
